@@ -11,52 +11,44 @@ INCORRECTAS
 --> Number
 */
 
-//! VAR
-/* El var declara una variable de ámbito de función o de ámbito global y, opcionalmente, la inicializa en un valor. */
+//! VAR vs LET
+/* En JavaScript, las variables pueden contener cualquier tipo de valor como:
+--> números
+--> cadenas de texto
+--> objetos
+--> funciones, etc. 
 
-var juguete = "oso";
+tener en cuenta que es necesario declarar las variables antes de usarlas.
+*/
 
-var juguete = "gato";
-if (typeof juguete === "string") {
-  var juguete = "perro"
-  console.log(juguete) //perro
-} 
-console.log(juguete) //perro
+let estado = true
+let juguete = "leopardo";
 
-
-//! LET
-/* La let declaración declara una variable local con ámbito de bloque y, opcionalmente, la inicializa en un valor. */
-
-let edad = 18;
-edad = 19;
-
-if (typeof edad == "number" ) {
-  let edad = 56;
-  console.log(edad); //56
+if(estado == true) {
+  let juguete = "loro"
+  console.log(juguete) //loro
 }
 
+console.log(juguete) //leopardo
 
-console.log(edad) //19
 
-
-//! CONST:
-/* Las constantes tienen un alcance de bloque, al igual que las variables declaradas con la palabra clave let. 
-
-El valor de una constante no se puede cambiar a través de la reasignación (es decir, mediante el uso del operador de asignación) y no se puede volver a declarar (es decir, a través de una declaración de variable). 
-
-Sin embargo, si una constante es un objeto o una matriz, sus propiedades o elementos se pueden actualizar o eliminar.
+//! CONST
+/* se utiliza para declarar variables que no pueden ser reasignadas después de ser asignadas por primera vez.
  */
 
-const DNI = 2323;
-const PI = 3.1416
-console.log(DNI)
-console.log(PI)
+// let estado = true;
+const PI = 3.14;
 
-
-const miObjeto = {
-  nombre: "taypedev",
-  edad: 22
+if(estado == true) {
+  const PI = 3.1489473837
+  console.log(PI)
 }
 
-miObjeto.nombre = "taype"
-console.log(miObjeto.nombre)
+console.log(PI);
+// 0 1 2 3
+const juguetes = [];
+juguetes[0] = "perro"
+
+
+console.log(juguetes);
+
